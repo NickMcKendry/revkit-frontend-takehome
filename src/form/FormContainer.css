@@ -1,3 +1,9 @@
 .form-container{
-  background-color: #9197AE;
+  margin-top: -30px;
+  padding-top: 20px;
+  height: 100vh;
+}
+
+.form-control{
+  width: 90%;
 }

@@ -1,0 +1,44 @@
+.left-container{
+  border-right: 1px solid #273043;
+  margin-left: 2%;
+
+}
+
+.or{
+  margin-top: 1.2em;
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.card{
+  height: 50vh;
+  width: 25vw;
+  margin-top: 10%;
+  margin-left: 20%;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 5px #999;
+  color: #DD0426;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-img {
+  height: 50%;
+  display: flex;
+  border-bottom:  1px solid #273043;
+}
+
+.part-img{
+  margin-left: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.form{
+}
