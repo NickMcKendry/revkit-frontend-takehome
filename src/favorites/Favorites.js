@@ -29,7 +29,9 @@ export default class Favorites extends Component {
     console.log(typeof(this.state.favorites), 'type');
     return(
       <div className="container-fluid full" >
-        <div className="card-container container-fluid ">
+        <div className="card-container container-fluid text-center">
+          <h1 className="wishlist-header">Your WishList</h1>
+
           {this.state.favorites.map((favorite, i) => (
             <div key={i} className="smallcard col-md-3 text-center">
                 <div className="top-img col-md-12">

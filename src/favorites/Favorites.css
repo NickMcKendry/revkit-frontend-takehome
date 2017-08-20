@@ -52,7 +52,13 @@
 }
 
 .card-container{
-  margin-top: 25%;
+  margin-top: 15%;
   width: 95vw;
   margin-left: 6.5em;
+}
+
+.wishlist-header{
+  margin-bottom: 12%;
+  font-size: 5em;
+  color: #F9564F;
 }

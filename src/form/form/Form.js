@@ -132,9 +132,9 @@ export default class Form extends Component {
             <h4>{this.state.priceValue}</h4>
             : <h4>Price</h4> }
           </div>
-          <div className="url-text col-md-6">
+          <div className="url-text col-md-6 text-center">
 
-            <a href={this.state.urlValue} style={{cursor: 'pointer'}} >{this.state.urlValue}</a>
+            <a href={this.state.urlValue} style={{cursor: 'pointer'}} >Link</a>
 
           </div>
         </div>
