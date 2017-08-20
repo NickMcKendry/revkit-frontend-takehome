@@ -1,31 +1,25 @@
-.left-container{
-  border-right: 1px solid #273043;
-  margin-left: 2%;
-
-}
-
-.or{
-  margin-top: 1.2em;
-}
-
-.right-container{
+.full {
+  background-image: url(./background.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  margin-top: -30px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(55, 55, 60)
 }
 
-.card{
-  height: 60vh;
-  width: 25vw;
-  margin-top: 10%;
-  margin-left: 20%;
+.smallcard{
+  height: 25em;
+  width: 18em;
+  background-color: rgba(255, 255, 255, .80);
   border-radius: 5px;
   box-shadow: 0 0 30px 5px #999;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 3%;
+  margin-right: -.12%;
+  margin-bottom: 3%;
 }
 
 .top-img {
@@ -57,6 +51,8 @@
   margin-top: 10%
 }
 
-.price{
-
+.card-container{
+  margin-top: 25%;
+  width: 95vw;
+  margin-left: 6.5em;
 }
