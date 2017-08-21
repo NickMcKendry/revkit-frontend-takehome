@@ -14,7 +14,7 @@ export default class Favorites extends Component {
   }
 
   getFavorites = () => {
-    axios.get('http://localhost:3200/api/favorites')
+    axios.get('https://nickmckendryrevkit.herokuapp.com/api/favorites')
       .then((response) => {
         console.log(response.data[0]);
         this.setState({ favorites: response.data })

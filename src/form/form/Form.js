@@ -64,7 +64,7 @@ export default class Form extends Component {
     const image = this.state.imageValue
 
 
-      axios.post('http://localhost:3200/api/favorites', {title: title, price: price, url: url, image: image})
+      axios.post('https://nickmckendryrevkit.herokuapp.com/api/favorites', {title: title, price: price, url: url, image: image})
     .then((result) => {
       console.log(result);
       this.context.router.history.push('/favorites')
