@@ -22,7 +22,8 @@ export default class Form extends Component {
       priceValue: undefined,
       urlValue: undefined,
       imageValue: undefined,
-      file: ''
+      file: '',
+      oEmbedUrl: ''
     }
   }
 
@@ -42,6 +43,21 @@ export default class Form extends Component {
     this.setState({ imageValue: e.target.value })
   }
 
+  updateoEmbedUrl = (e) => {
+    this.setState({ oEmbedUrl: e.target.value })
+    const key = '22bef7c25cab4fd19cfa877a87ab0f95'
+    axios.get(`https://api.embedly.com/1/oembed?url=${e.target.value}&key=${key}`)
+    .then((result) => {
+      console.log(result);
+      this.setState({
+        titleValue: result.data.title,
+        imageValue: result.data.thumbnail_url,
+        urlValue: result.data.url
+      })
+    })
+
+  }
+
   updateFileImageValue = (e) => {
     e.preventDefault()
     let reader = new FileReader();
@@ -55,6 +71,10 @@ export default class Form extends Component {
     }
     reader.readAsDataURL(file)
   }
+
+
+
+
 
    onSubmit = (e) => {
     e.preventDefault()
@@ -105,10 +125,10 @@ export default class Form extends Component {
 
         <h1 className="text-center or">OR</h1>
 
-        <form>
+        <form method="post" onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label htmlFor="link">Paste a link to a mod from the web!</label>
-            <input className="form-control" name="link" type="text" placeholder="https://carparts.com" />
+              <label htmlFor="link">Paste a link to a mod from the web!</label>
+              <input className="form-control" name="link" type="text" placeholder="https://carparts.com" value={this.state.oEmbedUrl} onChange={e => this.updateoEmbedUrl(e)} />
           </div>
           <button type="submit" className="btn btn-warning">Add to wishlist</button>
         </form>
